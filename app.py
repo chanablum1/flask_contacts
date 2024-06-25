@@ -2,17 +2,17 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/list")
 def list_contacts():
-   return "<p>Hello, World!</p>"
+   return "chana<br>shmuel<br>binyamin<br>"
 
 
 @app.route("/contacts")
 def contacts():
-   return "<p>Hello, blum!</p>"
+   return "<p>Hello, chana blum!</p>"
 
 
-@app.route("/addcontacts")
+@app.route("/add_contacts")
 def add_contacts():
    return "<p>Hello, chana!</p>"
 
