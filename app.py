@@ -30,9 +30,10 @@ def contacts_list():
    #  return final_html_str
 
 
-# @app.route("/single_contact/<int:index>")
-# def single_contact(index):
-#     return f"<h1>Single Contact Page </h1><h2>{my_contacts[index]['name']} - {my_contacts[index]['age']}</h2>"
+@app.route("/single_contact/<int:index>")
+def single_contact(index):
+    contact = my_contacts[index]
+    return render_template("contact_singel.html" , contact = contact)
 
 # @app.route("/add_contacts")
 # def add_contacts():
